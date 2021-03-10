@@ -36,6 +36,10 @@
 
 
 
+
+
+
+
 ```shell
 # 拉取镜像
 docker pull ghcr.io/fengzhao/dnsmasq:latest
@@ -64,7 +68,7 @@ docker run \
     
 
 
-
+# 管理界面  http://host_ip:5380  admin/123456 
 
 
 ```
