@@ -7,11 +7,9 @@
 
 目前使用最广的 DNS 服务器软件是 Bind(Berkeley Internet Name Domain)，支持多种平台。默认使用 TCP 53/UDP 53 端口进行服务。
 
-客户端查询服务时使用的是UDP的53端口，TCP的端口在主辅DNS之间同步和传输数据使用。
+客户端查询服务时使用的是 UDP 的 53 端口，TCP 的端口在主辅 DNS 之间同步和传输数据使用。
 
-有一种特殊情况，客户端发出DNS查询请求之后，接受到的应答总长度超过512字节，之后使用TCP重发查询请求。
-
-
+有一种特殊情况，客户端发出DNS查询请求之后，接受到的应答总长度超过 512 字节，之后使用 TCP 重发查询请求。
 
 
 
@@ -35,19 +33,16 @@
 
 
 
-
-
-
-
 ```shell
 # 拉取镜像
-docker pull ghcr.io/fengzhao/dnsmasq:latest
-
-docker pull fengzhao-docker.pkg.coding.net/wiki/docker/dnsmasq:latest
+# docker pull ghcr.io/fengzhao/dnsmasq:latest
+# docker pull fengzhao-docker.pkg.coding.net/wiki/docker/dnsmasq:latest
 
 mkdir -p /data/dns/
 
-vi /data/dns/dnsmasq.conf
+git clone https://github.com/fengzhao/docker-dnsmasq.git
+
+docker build -t ghcr.io/fengzhao/dnsmasq:latest .
 
 
 # 启动容器
