@@ -1,5 +1,7 @@
 FROM alpine:edge
 LABEL maintainer="fengzhao1124@hotmail.com"
+LABEL org.opencontainers.image.source=https://github.com/fengzhao/docker-dnsmasq
+
 # webproc release settings
 ENV WEBPROC_VERSION 0.4.0
 # ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/$WEBPROC_VERSION/webproc_linux_amd64.gz                                                                                                                                                                                     
